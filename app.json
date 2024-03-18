@@ -1,0 +1,27 @@
+{
+
+  "name": "app.json",
+  "description": "Create, validate, and render Heroku app.json manifests",
+  "version": "1.3.0",
+  "repository" : "https://github.com",
+  "keywords": [
+    "app.json",
+    "auto",
+    "delete",
+    "bot"
+  ],
+  "env": {
+      "ID": {
+        "description": "Your app id",
+        "value": ""
+      },
+     "HASH": {
+        "description": "Your Api hash",
+        "value": ""
+      },
+     "TOKEN": {
+        "description": "Your bot token",
+        "value": ""
+      }
+   }
+}
