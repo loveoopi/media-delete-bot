@@ -3,9 +3,9 @@ from pyrogram.errors import FloodWait
 import asyncio
 import os
 
-api_id = os.environ.get('ID')
-api_hash = os.environ.get('HASH')
-bot_token = os.environ.get('TOKEN')
+api_id = 1474940
+api_hash = "779e8d2b32ef76d0b7a11fb5f132a6b6"
+bot_token = "6772854734:AAG5VLqHJ6r-C_gTJmeLHsy7VXh6XoJC3Oc"
 app = Client(
     "my_bot",
     api_id=api_id, api_hash=api_hash,
