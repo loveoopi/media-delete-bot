@@ -13,7 +13,7 @@ app = Client(
 )
 
 
-@app.on_message((filters.photo | filters.animation | filters.video | filters.document) & filters.group)
+@app.on_message(~filters.text & filters.group)
 async def fwd(bot, message):
     try:
         await message.delete()
