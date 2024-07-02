@@ -10,18 +10,5 @@
     "delete",
     "bot"
   ],
-  "env": {
-      "ID": {
-        "description": "Your app id",
-        "value": ""
-      },
-     "HASH": {
-        "description": "Your Api hash",
-        "value": ""
-      },
-     "TOKEN": {
-        "description": "Your bot token",
-        "value": ""
-      }
-   }
+
 }
