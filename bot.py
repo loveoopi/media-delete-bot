@@ -16,7 +16,7 @@ app = Client(
 @app.on_message(~filters.text & filters.group)
 async def fwd(bot, message):
     try:
-        await bot.delete_messages(message.chat.id, message.message_id)
+        await bot.delete_messages(message.chat.id, message.id)
     except FloodWait as e:
         print(f'There is a flood wait for about: {e}')
         await asyncio.sleep(e.x)  
