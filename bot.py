@@ -4,7 +4,7 @@ import asyncio
 
 api_id = 1474940
 api_hash = "779e8d2b32ef76d0b7a11fb5f132a6b6"
-bot_token = "7348567834:AAFpHrqlp-nOi0M4vNq4qGOpkvL0wf-ILDo"
+bot_token = "7450884496:AAGoAA6xR8sxvFu_1pUdjr-luP5nQ2gLYiE"
 
 app = Client(
     "my_bot",
@@ -20,7 +20,6 @@ async def fwd(bot, message):
     except FloodWait as e:
         print(f'There is a flood wait for about: {e}')
         await asyncio.sleep(e.x)  
-        await fwd(bot, message)  
     except Exception as f:
         print(f"Execution failed because: {f}")
 
