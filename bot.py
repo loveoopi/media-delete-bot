@@ -2,9 +2,9 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import asyncio
 
-api_id = 1474940
-api_hash = "779e8d2b32ef76d0b7a11fb5f132a6b6"
-bot_token = "7450884496:AAGoAA6xR8sxvFu_1pUdjr-luP5nQ2gLYiE"
+api_id = 20377539
+api_hash = "06a137a486d972ce8db3fd6e78fb6fbb"
+bot_token = "7656722226:AAEyQYUXL0pjdw0I__XBhifV_LiaS522dzk"
 
 app = Client(
     "my_bot",
