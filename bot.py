@@ -15,6 +15,9 @@ app = Client(
 
 @app.on_message(~filters.text & filters.group)
 async def fwd(bot, message):
+    # Check if the message is from the specified user ID
+    if message.from_user and message.from_user.id == 7406389785:
+        return  # Skip deletion for this user
     try:
         await bot.delete_messages(message.chat.id, message.id)
     except FloodWait as e:
@@ -22,7 +25,6 @@ async def fwd(bot, message):
         await asyncio.sleep(e.x)  
     except Exception as f:
         print(f"Execution failed because: {f}")
-
 
 @app.on_message(filters.command('start'))
 async def start(bot, message):
