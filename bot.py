@@ -4,7 +4,7 @@ import asyncio
 
 api_id = 20377539
 api_hash = "06a137a486d972ce8db3fd6e78fb6fbb"
-bot_token = "8033547511:AAF1HbkBtHMow5v9Pwte9SITDAb9vOGOd2E"
+bot_token = "8134980800:AAFkxjVqeojm47s4lckhU11cWQVp3TUnHYA"
 
 app = Client(
     "my_bot",
@@ -30,7 +30,7 @@ async def fwd(bot, message):
 async def start(bot, message):
     user = message.from_user.first_name
     await message.reply(
-        f"Hi {user}, I am an auto delete bot for groups.\n\nI can delete any kind of Images and Videos. A simple yet powerful copyright protection for your groups."
+        f"Hi {user}, I am an auto delete bot for groups.\n\nI can delete any kind of Images and Videos. A simple yet powerful copyright protection for your groups. I am made by @kingXkingz. "
     )
 
 app.run()
