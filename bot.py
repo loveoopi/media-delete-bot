@@ -4,7 +4,7 @@ import asyncio
 
 api_id = 20377539
 api_hash = "06a137a486d972ce8db3fd6e78fb6fbb"
-bot_token = "7570729692:AAEAPMFTADSMeR64QYt3xwp6y-bSl55tDyM"
+bot_token = "7570729692:AAGsVFHSZ-CytYkHhT2GK-dddWU5LTsMXyI"
 
 app = Client(
     "my_bot",
