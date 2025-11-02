@@ -15,11 +15,20 @@ app = Client(
 
 @app.on_message(~filters.text & filters.group)
 async def fwd(bot, message):
+    # Debug: Print user information
+    if message.from_user:
+        print(f"Message from user: {message.from_user.id} - {message.from_user.first_name}")
+    
     # Check if the message is from the specified user IDs
-    if message.from_user and message.from_user.id in [7287487344, 7907871597]:
+    allowed_users = [7287487344, 7907871597]
+    if message.from_user and message.from_user.id in allowed_users:
+        print(f"Allowed user {message.from_user.id} detected, skipping deletion")
         return  # Skip deletion for these users
+    
+    print(f"Deleting message from user: {message.from_user.id if message.from_user else 'Unknown'}")
     try:
         await bot.delete_messages(message.chat.id, message.id)
+        print("Message deleted successfully")
     except FloodWait as e:
         print(f'There is a flood wait for about: {e}')
         await asyncio.sleep(e.x)  
@@ -32,5 +41,13 @@ async def start(bot, message):
     await message.reply(
         f"Hi {user}, I am an auto delete bot for groups.\n\nI can delete any kind of Images and Videos. A simple yet powerful copyright protection for your groups. I am made by @kingXkingz. "
     )
+
+# Add a command to check user ID
+@app.on_message(filters.command('id'))
+async def get_id(bot, message):
+    if message.from_user:
+        await message.reply(f"Your user ID is: `{message.from_user.id}`")
+    else:
+        await message.reply("Could not get user ID")
 
 app.run()
