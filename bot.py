@@ -16,7 +16,7 @@ app = Client(
 @app.on_message(~filters.text & filters.group)
 async def fwd(bot, message):
     # Check if the message is from the specified user IDs
-    if message.from_user and message.from_user.id in [7287487344 ]:
+    if message.from_user and message.from_user.id in [7287487344, 7907871597]:
         return  # Skip deletion for these users
     try:
         await bot.delete_messages(message.chat.id, message.id)
