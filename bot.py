@@ -3,8 +3,8 @@ from pyrogram.errors import FloodWait, Flood
 import asyncio
 import time
 
-api_id = 20377539
-api_hash = "06a137a486d972ce8db3fd6e78fb6fbb"
+api_id = 21737077
+api_hash = "3e692ae01796fca8ba0baa70154edd00"
 bot_token = "8545793353:AAFqM13zk3jYfm1vC5Ay3okuNzF8QuAzEio"
 
 app = Client(
